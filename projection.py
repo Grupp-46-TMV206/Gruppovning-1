@@ -10,7 +10,7 @@ def point_projection(p, v1, v2, n=None):
         n = array(n)
 
     """The equation below is partly taken from the coursebook, page 65, thesis 1:
-    u' = ((u(*)v/abs(v)^2)*v. It is as such safe to use. The rest is included from complementation."""
+    u' = ((u(*)v/abs(v)^2)*v. It is as such safe to use. The rest of the equation is included from complementation."""
 
     result = p - (n * ((dot(p, n)) / pow(abs(linalg.norm(n)), 2)))
     return print(f"The point-projection is: {result}")
