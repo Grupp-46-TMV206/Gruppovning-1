@@ -16,8 +16,8 @@ def point_projection(p, v1, v2, n=None):
     return print(f"The point-projection is: {result}")
 
 """v1 x v2 give the normals (0, 0, -1) and (0, 0, 1) for each respective value v2.
-In this equation the direction of the normals' values don't matter, as
-(0, 0, -1) is a scaled version of (0, 0, 1), by a factor of -1.
+In this equation the direction of the normals' values don't matter, 
+as (0, 0, -1) is a scaled version of (0, 0, 1) by a factor of -1.
 As the equation includes a division by abs(n)^2, scaled vectors will all give the same result.
 
 Additionally, a negative sign does not matter in the dot product of p and n, or in the multiplication by n.
