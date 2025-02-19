@@ -15,14 +15,14 @@ def point_projection(p, v1, v2, n=None):
     result = p - (n * ((dot(p, n)) / pow(abs(linalg.norm(n)), 2)))
     return print(f"The point-projection is: {result}")
 
-"""These two values will be the same. v1 x v2 give the normals (0, 0, -1) and (0, 0, 1) for each respective value v2.
-In this calculation, the direction of the normal's values doesn't matter, just the magnitudes.
-(0, 0, -1) is essentially a scaled version of (0, 0, 1), by a factor of -1.
+"""v1 x v2 give the normals (0, 0, -1) and (0, 0, 1) for each respective value v2.
+In this equation the direction of the normals' values don't matter, as
+(0, 0, -1) is a scaled version of (0, 0, 1), by a factor of -1.
 As the equation includes a division by abs(n)^2, scaled vectors will all give the same result.
 
 Additionally, a negative sign does not matter in the dot product of p and n, or in the multiplication by n.
 A negative value in the dot product negates the whole dot product. n * also becomes -n *.
-This gives a double negation between the two mentioned n-related values, which results in the same positive."""
+This gives a double negation between the two mentioned n-related values, which results in a positive."""
 
 point_projection([math.pi, math.e, 1], [1, 1, 0], [0, -1, 0])
 point_projection([math.pi, math.e, 1], [1, 1, 0], [0, 1, 0])
